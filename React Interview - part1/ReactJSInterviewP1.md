@@ -150,7 +150,7 @@ component và update chỉ khi post có updated.
 -   VD: Background của component sẽ thay đổi thành đỏ nếu người dùng
     nhập vào một số chẵn, là xanh nếu người dùng nhập vào số lẻ.
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image1.png){width="4.763888888888889in"
+![](extrafile/media/image1.png){width="4.763888888888889in"
 height="3.4305555555555554in"}
 
 Component ColoredSquare sẽ luôn được render lại mỗi khi người dùng đổi
@@ -158,7 +158,7 @@ giá ở input, bất kể nó là giá trị gì. Để nâng cao hiệu năng 
 thì ta cần xử lý chỉ cho component render lại nếu giá trị đổi từ số chẵn
 sang lẻ hoặc lẻ sang chẵn. Ta có thể sử dụng React.memo như sau:
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image2.png){width="4.986111111111111in"
+![](extra/media/image2.png){width="4.986111111111111in"
 height="4.5in"}
 
 Đối số thức nhất là 1 wrapper component. Đối số thứ hai truyền vào
@@ -220,7 +220,7 @@ sẽ áp dụng React.memo() để hạn chế việc re-render trên Movie comp
     cũng sẽ tránh được việc tạo các object không cần thiết, tránh
     re-render.
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image3.png){width="4.958333333333333in"
+![](extrafile/media/image3.png){width="4.958333333333333in"
 height="4.208333333333333in"}
 
 Viết như thế này, mỗi lần ComponentA re-render, hàm getStyle sẽ tạo ra
@@ -229,7 +229,7 @@ re-render (mặc dù đã sử dụng React.memo)
 
 =\> khi có useMemo()
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image4.png){width="4.958333333333333in"
+![](extrafile/media/image4.png){width="4.958333333333333in"
 height="4.208333333333333in"}
 
 Giờ đây, khi dùng useMemo cho hàm getStyle, (để ý getStyle không còn dấu
@@ -254,7 +254,7 @@ không re-render.
 
 **Khi không dùng useCallback**
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image5.png){width="4.986111111111111in"
+![](extrafile/media/image5.png){width="4.986111111111111in"
 height="2.75in"}
 
 Viết thế này, mỗi lần component Parent re-render, callback
@@ -263,7 +263,7 @@ cho component có sử dụng React.memo, nó vẫn bị re-rendered.
 
 **Khi dùng useCallback**
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image6.png){width="4.958333333333333in"
+![](extrafile/media/image6.png){width="4.958333333333333in"
 height="2.75in"}
 
 Nhờ sử dụng useCallback, giờ đây ở mỗi lần component Parent re-render,
@@ -274,7 +274,7 @@ không bị re-render. Tuyệt vời!
 
 **useCallback() \<==\> useMemo()**
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image7.png){width="4.986111111111111in"
+![](extrafile/media/image7.png){width="4.986111111111111in"
 height="0.9027777777777778in"}
 
 Như đã nói phía trên, useMemo sẽ thực thi hàm được pass vào và trả ra
@@ -314,7 +314,7 @@ Hàm setState là không đồng bộ. Nghĩa là state sẽ không thực sự 
 nhật sau khi gọi hàm setState và điều này có thể dẫn tới làm tăng 1 vài
 cách xử lý nên tránh.
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image8.tiff){width="5.555555555555555in"
+![](extrafile/media/image8.tiff){width="5.555555555555555in"
 height="8.777777777777779in"}
 
 Với bức ảnh trên, khi gọi setState và sau đó chạy console.log state ngay
@@ -322,7 +322,7 @@ lập tức. Đáng lẽ biến counter sẽ đổi thành 1, nhưng thực ra n
 
 =\> setState là 1 hàm callback
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image9.tiff){width="5.555555555555555in"
+![](extrafile/media/image9.tiff){width="5.555555555555555in"
 height="6.347222222222222in"}
 
 =\> nó đã hoạt động. Thay vì truyền 1 đối tượng vào setState, chúng ta
@@ -336,7 +336,7 @@ các lời gọi setState vào hàng đợi để chúng có thể chạy theo t
 
 **Bất đồng bộ**
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image10.tiff){width="5.555555555555555in"
+![](extrafile/media/image10.tiff){width="5.555555555555555in"
 height="4.458333333333333in"}
 
 **\
@@ -344,7 +344,7 @@ height="4.458333333333333in"}
 
 **Đồng bộ**
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image11.tiff){width="5.555555555555555in"
+![](extrafile/media/image11.tiff){width="5.555555555555555in"
 height="3.4583333333333335in"}
 
 Với cách xử lý đầu tiên, cả 2 hàm setState đều trực tiếp sử dụng
@@ -428,7 +428,7 @@ component. Việc mutate thuộc tính .current sẽ không gây nên re-render.
 **Chúng ta sẽ nhận một thông báo tham chiếu đến Input Component là
 null**
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image12.tiff){width="5.013888888888889in"
+![](extrafile/media/image12.tiff){width="5.013888888888889in"
 height="1.2274442257217848in"}
 
 Để fix vấn đề này ta dùng forwardRef như một HOC cho Input Component
@@ -444,7 +444,7 @@ height="1.2274442257217848in"}
 
 **Kết quả:**
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image13.tiff){width="5.722222222222222in"
+![](extrafile/media/image13.tiff){width="5.722222222222222in"
 height="1.4027777777777777in"}
 
 **C. useReducer**
@@ -668,7 +668,7 @@ Link chi tiết:
 
 -   View có thể lấy lại state đã update và re-render
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image14.tiff){width="6.25in"
+![](extrafile/media/image14.tiff){width="6.25in"
 height="4.333333333333333in"}
 
 -   **Cơ chế reselect trong redux**
@@ -905,7 +905,7 @@ dụng thuật toán Diffing để so sánh và đối chiếu để biết đ
 được diễn ra ở đâu sau đó cập nhật nó mà bỏ qua những elements không
 liên quan.
 
-![](vertopal_9e3232fe859f4162848a0eb7c25ac034/media/image15.png){width="6.5in"
+![](extrafile/media/image15.png){width="6.5in"
 height="1.0791666666666666in"}
 
 10. **React-Router**
