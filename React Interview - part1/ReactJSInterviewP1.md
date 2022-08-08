@@ -1,6 +1,6 @@
 **React Interview**
 
-1.  **[Life cycle]{.ul}**
+1.  **[Life cycle]
 
 -   **componentWillMount:** là method được thực thi trước khi 1
     component được render ở cả phía server side và client side.
